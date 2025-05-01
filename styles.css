@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Quicksand:wght@300..700&family=Underdog&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+   
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Quicksand", sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
 }
@@ -14,9 +18,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     background-color: #1a1a1a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 100px;
+    margin: 1rem;
 }
 
 .nav-brand a {
@@ -55,5 +61,331 @@ body {
     .nav-links {
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 6rem;
+    padding: 2rem;
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+
+.portfolio-text {
+    position: relative;
+    z-index: 1;
+}
+
+.port, .folio {
+    display: block;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: 0.1em;
+}
+
+.port {
+    position: relative;
+}
+
+/* Flower decoration in the O */
+.port::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('path-to-your-flower-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 25%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.year-text {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+.polaroid-container {
+    position: relative;
+    margin-right: 7rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .port, .folio {
+        font-size: 6rem;
+    }
+    
+    .polaroid img {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .port, .folio {
+        font-size: 4rem;
+    }
+    
+    .polaroid-container {
+        margin-right: 0;
+    }
+}
+
+.about-section {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-image: url('torn-edge.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.about-left, .about-right {
+    flex: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: "Kumbh Sans", sans-serif;
+
+}
+
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.education {
+    margin-top: 3rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #FF0000;
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: #FF0000;
+    border-radius: 50%;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.degree {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+.tools-grid img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.projects-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 6rem 0;
+    position: relative;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.projects-header {
+    margin-bottom: 4rem;
+}
+
+.projects-title {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.case-studies {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.case-study {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.case-study-image {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.case-study-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.1), rgba(26, 26, 26, 0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.case-study-image:hover img {
+    transform: scale(1.05);
+}
+
+.case-study-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.case-study-content {
+    flex: 1;
+}
+
+.case-study-content h3 {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.case-study-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .case-study {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .case-study-content h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 4rem 0;
+    }
+
+    .projects-header {
+        margin-bottom: 3rem;
+    }
+
+    .case-studies {
+        gap: 4rem;
     }
 } 
