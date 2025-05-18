@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Underdog&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Quicksand:wght@300..700&family=Underdog&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Quicksand:wght@300..700&family=Underdog&display=swap'); */
 * {
     margin: 0;
     padding: 0;
@@ -148,22 +148,29 @@ body {
 }
 
 .about-section {
-    background-color: #ffffff;
-    color: #1a1a1a;
+    /* background-color: #ffffff; */
+    background-image: url('TORN\ PAPER\ \(1\).png');
+    /* color: #1a1a1a; */
+    height: 110vh;
+    width: 100%;
     position: relative;
-    padding: 4rem 0;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
 }
 
 .about-section::before {
     content: '';
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    background-image: url('torn-edge.png');
-    background-size: cover;
-    background-position: bottom;
+    bottom: 0;
+    opacity: 0.1;
+    
 }
 
 .about-container {
@@ -172,6 +179,7 @@ body {
     padding: 0 2rem;
     display: flex;
     gap: 4rem;
+    z-index: -5;
 }
 
 .about-left, .about-right {
@@ -190,6 +198,26 @@ h2 {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    z-index: 5;
+}
+.about {
+width: 500px;
+height: auto;
+}
+
+.edu {
+    width: 500px;
+    height: auto;
+}
+
+.tool {
+    width: 500px;
+    height: auto;
+}
+
+.skill {
+    width: 250px;
+    height: 40%;
 }
 
 .education {
@@ -313,38 +341,91 @@ h2 {
     align-items: center;
 }
 
-.case-study-image {
+.case-study-card {
+    /* display: flex; */
     flex: 1;
     position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 400px;
 }
 
-.case-study-image img {
+.card-stack {
+    position: absolute;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #e1e1e1;
+}
+
+.card-back {
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(-3deg);
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.card-middle {
+    bottom: -10px;
+    left: -10px;
+    transform: rotate(-1.5deg);
+    z-index: 2;
+    opacity: 0.2;
+}
+
+.case-study-image1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url(./traveazy.png);
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+.case-study-image2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url(./community.png);
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+.case-study-image3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url(./uber.png);
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 3;
     transition: transform 0.3s ease;
 }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.1), rgba(26, 26, 26, 0.4));
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.case-study-card:hover .case-study-image {
+    transform: translateY(-5px);
 }
 
-.case-study-image:hover img {
-    transform: scale(1.05);
+.case-study-card:hover .card-middle {
+    transform: rotate(-1.5deg) translateY(-3px);
 }
 
-.case-study-image:hover .image-overlay {
-    opacity: 1;
+.case-study-card:hover .card-back {
+    transform: rotate(-3deg) translateY(-2px);
 }
 
 .case-study-content {
@@ -352,7 +433,7 @@ h2 {
 }
 
 .case-study-content h3 {
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: "helvetica", sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -387,5 +468,114 @@ h2 {
 
     .case-studies {
         gap: 4rem;
+    }
+}
+
+.case-study-reverse {
+    flex-direction: row-reverse;
+}
+
+.contact-section {
+    background: #fff;
+    height: 100vh;
+    background: url('./ton_paper.png') repeat-x top center;
+    position: relative;
+    padding: 0 0 6rem 0;
+    color: #222;
+    margin-top: -5px;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.torn-top {
+    width: 100%;
+    height: 70px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:5;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+    z-index: -4;
+}
+
+.contact-title {
+    /* font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem; */
+    height: auto;
+    width: 500px;
+}
+
+.contact-desc {
+    color: #888;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+}
+
+.contact-btn {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 400px;
+    background: #222;
+    color: #fff;
+    border-radius: 50px;
+    padding-left:3rem;
+    padding-right:3rem;
+    padding-top:1.2rem;
+    padding-bottom:1.2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    gap: 1rem;
+}
+
+#ctn{
+    /* width: 100%; */
+    display: block;
+    text-align: center;
+}
+.contact-btn:hover {
+    background: #444;
+    color: #fff;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .contact-container {
+        padding-top: 60px;
     }
 } 

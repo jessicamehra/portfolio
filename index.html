@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica Mehra</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  
+
     <nav class="navbar">
         <div class="nav-brand">
             <a href="/">JESSICA MEHRA</a>
         </div>
         <div class="nav-links">
-            <a href="/about">ABOUT</a>
-            <a href="/projects">PROJECTS</a>
-            <a href="/contact">CONTACT ME</a>
+            <a href="#about-section">ABOUT</a>
+            <a href="#projects-section">PROJECTS</a>
+            <a href="#contact-section">CONTACT ME</a>
         </div>
     </nav>
     <main class="hero-section">
@@ -31,30 +34,31 @@
     </main>
     <section class="about-section">
         <div class="about-container">
+            
             <div class="about-left">
                 <div class="about-me">
-                    <h2>ABOUT ME</h2>
-                    <p>I'm Jessica Mehra - a UX and UI designer based in Gurugram.</p>
-                    <p>Currently a UX design student, in my final year. I hope to change the world one design at a time.</p>
+                    <h2><img src="about me.png" alt="About me" class="about"></h2>
+                    <p style="color:rgb(110, 109, 109);">I'm Jessica Mehra - a UX and UI designer based in Gurugram.</p>
+                    <p style="color:rgb(110, 109, 109);">Currently a UX design student, in my final year. I hope to change the world one design at a time.</p>
                 </div>
                 <div class="education">
-                    <h2>EDUCATION</h2>
+                    <h2><img src="edu.png" alt="education" class="edu"></h2>
                     <div class="timeline">
                         <div class="education-item">
                             <span class="date">2019-2021</span>
-                            <h3>Convent of Jesus and Mary</h3>
+                            <h3 style="color:rgb(110, 109, 109);">Convent of Jesus and Mary</h3>
                         </div>
                         <div class="education-item">
                             <span class="date">2022-2025</span>
                             <p class="degree">BDES - UX DESIGN</p>
-                            <h3>Sushant University</h3>
+                            <h3 style="color:rgb(110, 109, 109);">Sushant University</h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="about-right">
                 <div class="tools">
-                    <h2>TOOLS</h2>
+                    <h2><img src="tools.png" alt="tools" class="tool"></h2>
                     <div class="tools-grid">
                         <img src="fig.png" alt="Figma">
                         <img src="framer.png" alt="Framer">
@@ -65,7 +69,7 @@
                     </div>
                 </div>
                 <div class="skills">
-                    <h2>SKILLS</h2>
+                    <h2><img src="SKILLS.png" alt="skills" class="skill"> </h2>
                     <div class="skills-grid">
                         <span class="skill-tag">Journey Mapping</span>
                         <span class="skill-tag">Usability Testing</span>
@@ -84,22 +88,101 @@
     <section class="projects-section">
         <div class="projects-container">
             <div class="projects-header">
-                <img src="projects-text.png" alt="PROJECTS" class="projects-title">
+                <img src="projects.png" alt="PROJECTS" class="projects-title">
             </div>
             <div class="case-studies">
                 <div class="case-study">
-                    <div class="case-study-image">
-                        <img src="case-study-1.png" alt="Case Study 1">
-                        <div class="image-overlay"></div>
+                    <div class="case-study-card">
+                        <!-- <div class="card-stack card-back"></div> -->
+                        <div class="card-stack card-middle"></div>
+                        <div class="case-study-image1">
+                            <div class="image-overlay">
+                                <!-- <img src="./traveazy.png" alt="not found" height="400px" width="540px"> -->
+                            </div>
+                        </div>
                     </div>
                     <div class="case-study-content">
-                        <h3>CASE STUDY 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit. quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit. quis imperdiet augue.</p>
+                        <h3 style="font-family: helvetica;">CASE STUDY 1</h3>
+                        <p>A smart travel companion app that uses AI and crowdsourcing to create personalized itineraries, offer real-time updates, and help users discover local, non-touristy experiences.
+                            It simplifies trip planning, enhances on-trip exploration, and builds a travel community through shared testimonials.
+                            Designed to be your go-to buddy before, during, and after your journey.</p>
                     </div>
                 </div>
-                <!-- More case studies can be added here with the same structure -->
+                <div class="case-study case-study-reverse">
+                    <div class="case-study-card">
+                        <!-- <div class="card-stack card-back"></div> -->
+                        <div class="card-stack card-middle" >
+                            
+                        </div>
+                        <div class="case-study-image2">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>CASE STUDY 2</h3>
+                        <p>This project aims to design a smart city digital solution that enables citizens to report and track civic issues through an intuitive dashboard. It promotes transparency, faster resolution, and active community engagement. The platform simplifies complaint filing and enhances communication between residents and municipal authorities.</p>
+                    </div>
+                </div>
+                <div class="case-study">
+                    <div class="case-study-card">
+                        <!-- <div class="card-stack card-back"></div> -->
+                        <div class="card-stack card-middle"></div>
+                        <div class="case-study-image3">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>CASE STUDY 3</h3>
+                        <p>Redesigned the Uber app to enhance user experience with a cleaner interface, simplified booking flow, and improved real-time tracking. Focused on accessibility, intuitive navigation, and faster interactions. The redesign aims to make ride-hailing more seamless and user-friendly.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <section class="contact-section">
+        <div class="torn-top"></div>
+        <div class="contact-container">
+            <h2 ><img src="get in touch.png" alt="get in touch" class="contact-title"></h2>
+            <p class="contact-desc">
+                Talking is the best way to explore how I can help you with your ideas. I'm open to any new email or an informal coffee meet in 2025. As long we find something interesting for us to explore and build — Let's talk.
+            </p>
+            <div class="contact-grid">
+                <a class="contact-btn" href="mailto:jessicamehra01@gmail.com">
+                    <span class="contact-icon">
+                        <!-- Email SVG icon -->
+                        <i class="fa-solid fa-envelope"></i>
+                        <!-- <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#fff" opacity="5"/><path d="M4 6.75A2.75 2.75 0 0 1 6.75 4h10.5A2.75 2.75 0 0 1 20 6.75v10.5A2.75 2.75 0 0 1 17.25 20H6.75A2.75 2.75 0 0 1 4 17.25V6.75Zm2.75-.25a.25.25 0 0 0-.25.25v.637l5.25 3.5 5.25-3.5V6.75a.25.25 0 0 0-.25-.25H6.75Zm10.5 2.363-5.1 3.4a.75.75 0 0 1-.8 0l-5.1-3.4V17.25c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V8.863Z" fill="#fff"/><path d="M4 6.75A2.75 2.75 0 0 1 6.75 4h10.5A2.75 2.75 0 0 1 20 6.75v10.5A2.75 2.75 0 0 1 17.25 20H6.75A2.75 2.75 0 0 1 4 17.25V6.75Zm2.75-.25a.25.25 0 0 0-.25.25v.637l5.25 3.5 5.25-3.5V6.75a.25.25 0 0 0-.25-.25H6.75Zm10.5 2.363-5.1 3.4a.75.75 0 0 1-.8 0l-5.1-3.4V17.25c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V8.863Z" fill="#222"/></svg> -->
+                    </span>
+                    jessicamehra01@gmail.com
+                </a>
+                <a class="contact-btn" href="tel:+91705810818">
+                    <span class="contact-icon">
+                        <!-- Phone SVG icon -->
+                        <i class="fa-solid fa-phone"></i>
+                        <!-- <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#fff" opacity="0"/><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C7.61 21 3 16.39 3 11a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="#fff"/><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C7.61 21 3 16.39 3 11a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill=\"#222\"/></svg> -->
+                    </span>
+                    <span id="ctn">
+                        +91 705810818
+                    </span>
+                </a>
+                <a class="contact-btn" href="https://www.linkedin.com/in/jessica-mehra/" target="_blank">
+                    <span class="contact-icon">
+                        <!-- LinkedIn SVG icon -->
+                        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#fff" opacity="0"/><path d="M6.94 7.5a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88ZM5.5 9.25h2.88v8.25H5.5V9.25Zm4.12 0h2.76v1.13h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.89 3.4 4.34v4.26h-2.88v-3.78c0-.9-.02-2.06-1.26-2.06-1.26 0-1.45.98-1.45 1.99v3.85H9.62V9.25Z" fill="#fff"/><path d="M6.94 7.5a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88ZM5.5 9.25h2.88v8.25H5.5V9.25Zm4.12 0h2.76v1.13h.04c.38-.72 1.3-1.48 2.68-1.48 2.87 0 3.4 1.89 3.4 4.34v4.26h-2.88v-3.78c0-.9-.02-2.06-1.26-2.06-1.26 0-1.45.98-1.45 1.99v3.85H9.62V9.25Z" fill=\"#222\"/></svg>
+                    </span>
+                    linkedin.com/in/jessica-mehra
+                </a>
+                <a class="contact-btn" href="https://www.behance.net/10a6f5cd" target="_blank">
+                    <span class="contact-icon">
+                        <!-- Behance SVG icon -->
+                        <i class="fa-brands fa-behance" style="color: #ffffff;"></i>
+                        <!-- <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#fff" opacity="0"/><path d="M7.5 9.25h2.25a2.25 2.25 0 1 1 0 4.5H7.5v-4.5Zm0 5.25h2.5a2.75 2.75 0 1 1 0 5.5H7.5v-5.5Zm7.25-2.75h4.25v1.25h-4.25v-1.25Zm0 2.25h4.25v1.25h-4.25v-1.25Z" fill="#fff"/><path d="M7.5 9.25h2.25a2.25 2.25 0 1 1 0 4.5H7.5v-4.5Zm0 5.25h2.5a2.75 2.75 0 1 1 0 5.5H7.5v-5.5Zm7.25-2.75h4.25v1.25h-4.25v-1.25Zm0 2.25h4.25v1.25h-4.25v-1.25Z" fill=\"#222\"/></svg> -->
+                    </span>
+                    behance.net/jessicamehra
+                </a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html> 
